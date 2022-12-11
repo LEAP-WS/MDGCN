@@ -4,7 +4,7 @@ This is the repository for the TGRS paper [Multiscale Dynamic Graph Convolutiona
 
 ## Requirements
 
-- Tensorflow (1.4.0)
+- Tensorflow (1.14.0)
 
 ## Usage
 
