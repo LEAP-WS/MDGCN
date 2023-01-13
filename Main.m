@@ -8,11 +8,13 @@
 % statistical results are saved in the file 'stat_res.mat'
 % the predicted labels are saved in the file 'pred_mat.mat'
 %%
+name = "IP"
+
 train_num = 30;
-load('./data/IP_gyh');
-load('./data/IP_gt');
+load(['./data/',name]);
+load(['./data/',name,'_gt']);
 [ ~, ~, ~, ~, trpos,tepos ] = TrainTestPixel(IP_gyh, IP_gt, train_num, 15 );
 save('./data/trpos', 'trpos');
 save('./data/tepos', 'tepos');
 % You may need to add the path of python manually
-system('python trainMDGCN.py');
+% system('python trainMDGCN.py');

@@ -6,6 +6,8 @@ from BuildSPInst_A import *
 import tensorflow as tf
 import time
 
+
+
 time_start=time.time()
 def GCNevaluate(mask1, labels1):
     t_test = time.time()
@@ -15,8 +17,8 @@ def GCNevaluate(mask1, labels1):
 data_name = 'IP'
 num_classes = 16
 
-learning_rate = 0.0005
-epochs=5000
+learning_rate = 1e-3
+epochs=700
 img_gyh = data_name+'_gyh'
 img_gt = data_name+'_gt'
 
@@ -51,12 +53,16 @@ GCNmodel = GCNModel( features = sp_mean, labels = sp_label, learning_rate = lear
 sess=tf.Session()
 sess.run(tf.global_variables_initializer())
 
+saver = tf.train.Saver()
+
 for epoch in range(epochs):
     # Training step=
     outs = sess.run([GCNmodel.opt_op, GCNmodel.loss, GCNmodel.accuracy], feed_dict={ labels:sp_label, 
                     mask:trmask })
     print("Epoch:", '%04d' % (epoch + 1), "train_loss=", "{:.5f}".format(outs[1]),
           "train_acc=", "{:.5f}".format(outs[2]))
+        
+saver.save(sess, './checkpoints/%s.ckpt'%(data_name), global_step=700)
 print("Optimization Finished!")
 # Testing
 test_cost, test_acc, test_duration = GCNevaluate(temask, sp_label)

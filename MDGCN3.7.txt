@@ -1,0 +1,24 @@
+absl-py==1.4.0
+astor==0.8.1
+certifi @ file:///croot/certifi_1671487769961/work/certifi
+gast==0.5.3
+google-pasta==0.2.0
+grpcio==1.51.1
+h5py==3.7.0
+importlib-metadata==6.0.0
+Keras-Applications==1.0.8
+Keras-Preprocessing==1.1.2
+Markdown==3.4.1
+MarkupSafe==2.1.1
+numpy==1.21.6
+protobuf==3.19.0
+scipy==1.7.3
+six==1.16.0
+tensorboard==1.14.0
+tensorflow==1.14.0
+tensorflow-estimator==1.14.0
+termcolor==2.2.0
+typing_extensions==4.4.0
+Werkzeug==2.2.2
+wrapt==1.14.1
+zipp==3.11.0
