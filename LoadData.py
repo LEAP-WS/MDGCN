@@ -12,7 +12,7 @@ def Con2Numpy(var_name):
 
 def load_HSI_data( data_name ):
     Data = dict()
-    img_gyh = data_name+'_gyh'
+    img_gyh = data_name+''
     img_gt = data_name+'_gt'
     Data['useful_sp_lab'] = np.array(Con2Numpy('useful_sp_lab'), dtype='int')
     Data[img_gt] = np.array(Con2Numpy(img_gt), dtype='int')

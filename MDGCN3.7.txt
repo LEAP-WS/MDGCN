@@ -1,6 +1,5 @@
 absl-py==1.4.0
 astor==0.8.1
-certifi @ file:///croot/certifi_1671487769961/work/certifi
 gast==0.5.3
 google-pasta==0.2.0
 grpcio==1.51.1

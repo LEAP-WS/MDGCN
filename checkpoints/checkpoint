@@ -1,2 +1,2 @@
-model_checkpoint_path: "IP.ckpt-700"
-all_model_checkpoint_paths: "IP.ckpt-700"
+model_checkpoint_path: "KSC.ckpt-700"
+all_model_checkpoint_paths: "KSC.ckpt-700"

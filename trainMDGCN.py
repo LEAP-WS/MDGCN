@@ -14,12 +14,12 @@ def GCNevaluate(mask1, labels1):
     outs_val = sess.run([GCNmodel.loss, GCNmodel.accuracy], feed_dict={labels: labels1, mask: mask1})
     return outs_val[0], outs_val[1], (time.time() - t_test)
 
-data_name = 'IP'
-num_classes = 16
+data_name = 'KSC'
+num_classes = 13
 
 learning_rate = 1e-3
 epochs=700
-img_gyh = data_name+'_gyh'
+img_gyh = data_name+''
 img_gt = data_name+'_gt'
 
 
